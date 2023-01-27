@@ -1,0 +1,385 @@
+footer{
+    padding: 70px 0 50px;
+    @include breakpoint(xxxmedium){
+        padding: 60px 0 40px;
+    }
+    @include breakpoint(xmedium){
+        padding: 40px 0 30px;
+    }
+    .container{
+        max-width: 1440px;
+        padding: 0 60px;
+        @include breakpoint(large){
+            padding: 0 50px;
+        }
+        @include breakpoint(xxxmedium){
+            padding: 0 40px;
+        }
+        @include breakpoint(xmedium){
+            padding: 0 30px;
+        }
+        @include breakpoint(ipad){
+            padding: 0 25px;
+        }
+
+    }
+    .footer__nav{
+        .logo{
+            @include breakpoint(ipad){
+                width: 130px;
+            }
+            @include breakpoint(largeMobile){
+                width: 160px;
+            }
+        }
+        ul{
+            @include breakpoint(largeMobile){
+                width: 100%;
+                margin-top: 20px;
+                gap: 14px;
+            }
+            @include breakpoint(xsmall){
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+        }
+        li{
+            margin-right: 50px;
+            @include breakpoint(xmedium){
+                margin-right: 35px;
+            }
+            @include breakpoint(ipad){
+                margin-right: 17px;
+            }
+            @include breakpoint(largeMobile){
+                margin-right: 0px;
+            }
+            &:nth-last-of-type(1){
+                margin-right: 0px;
+            }
+        }
+        a{
+            color: $color-black;
+            font-weight: 500;
+            font-size: 16px;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+    .sign-up{
+        max-width: 520px;
+        @include breakpoint(ipad){
+            max-width: 100%;
+        }
+    }
+    h6{
+        margin: 61px 0 50px;
+        @include breakpoint(large){
+            margin: 55px 0 45px;
+        }
+        @include breakpoint(xmedium){
+            margin: 40px 0 30px;
+            font-size: 16px;
+        }
+        @include breakpoint(ipad){
+            margin: 22px 0;
+            font-size: 15px;
+            br{
+                display: none;
+            }
+        }
+    }
+    .form-group{
+        width: 100%;
+        border-bottom: 1px solid $color-black;
+        display: flex;
+        .btn{
+            background-color: transparent;
+            color: $color-black;
+            padding: 0px 0 25px;
+            cursor: pointer;
+            figure{
+                width: 25px;
+                height: 25px;
+                padding: 4px;
+                border-radius: 50%;
+                background-color: $color-primary;
+                transform: rotate(-10deg);
+                margin-left: 10px;
+                transition: all 0.5s;
+                img{
+                    transform: inherit;
+                    height: 100%;
+                    margin: 0;
+                    width: 14px;
+                }
+            }
+        }
+        .form-control{
+            border: none;
+            padding: 0px 20px 25px 0;
+            width: calc(100% - 130px);
+            font-size: 14px;
+            color: $color-primary;
+            &::placeholder{
+                color: rgba(0, 0, 0, .2);
+                font-size: 14px;
+            }
+            @include breakpoint(ipad){
+                width: calc(100% - 110px);
+                padding: 0 15px 15px 0;
+            }
+        }
+        .btn{
+            width: 130px;
+            &:hover{
+                color: $color-primary;
+                figure{
+                    transform: rotate(0deg);
+                }
+            }
+            &::after{
+                background-color: #fff;
+            }
+            &:hover{
+                background-color: transparent;
+            }
+            @include breakpoint(ipad){
+                width: 110px;
+            }
+        }
+    }
+    .col{
+        width: 45%;
+        @include breakpoint(xxmedium){
+            width: 46%;
+        }
+        @include breakpoint(xmedium){
+            width: 46%;
+        }
+        @include breakpoint(ipad){
+            width: 100%;
+        }
+        ul{
+            margin-top: 48px;
+            @include breakpoint(xmedium){
+                margin-top: 30px;
+            }
+            @include breakpoint(ipad){
+                margin-top: 20px;
+            }
+        }
+        li{
+            width: 45px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 36px;
+            @include breakpoint(xxxmedium){
+                margin-top: 25px;
+            }
+            @include breakpoint(xmedium){
+                margin-top: 15px;
+            }
+            a{
+                font-weight: $medium;
+                display: inline-block;
+                transition: all .5s ease-in-out;
+                margin-top: 10px;
+                &:hover{
+                    color: $color-primary;
+                }
+                &:nth-of-type(1){
+                    margin-top: 0px;
+                }
+            }
+            address{
+                font-weight: $medium;
+                font-style: normal;
+            }
+            figure{
+                width: 24px;
+            }
+            &:nth-of-type(2n){
+                width: calc(100% - 45px);
+            }
+        }
+        .social_media{
+            max-width: 481px;
+            padding-right: 75px;
+            margin-left: auto;
+            @include breakpoint(xxxmedium){
+                padding-right: 50px;
+            }
+            @include breakpoint(xmedium){
+                padding-right: 20px;
+            }
+            @include breakpoint(ipad){
+                padding-right: 0px;
+                margin: 0px;
+                max-width: 300px;
+            }
+            h6{
+                margin-bottom: 20px;
+                color: rgba(0, 0, 0, .4);
+                font-weight: 500;
+                font-size: 16px;
+            }
+            ul{
+                margin: 0 0 45px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+                @include breakpoint(xmedium){
+                    margin-bottom: 30px;
+                }
+                li{
+                    margin: 0;
+                    max-width: 123px;
+                    width: 100%;
+                    height: 123px;
+                    background: #FFFFFF;
+                    border: 1px solid #EFECE1;
+                    border-radius: 3px;
+                    transition: all .5s ease-in-out;
+                    @include breakpoint(xmedium){
+                        max-width: 100px;
+                        height: 100px;
+                    }
+                    @include breakpoint(ipad){
+                        max-width: 80px;
+                        height: 80px;
+                    }
+                    &:hover{
+                        border-color: $color-primary;
+                    }
+                    a{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        font-size: 18px;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+            }
+            .btn_wrapper{
+                .btn{
+                    font-size: 40px;
+                    width: 100%;
+                    font-weight: $bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include breakpoint(large){
+                        font-size: 35px;
+                    }
+                    @include breakpoint(xxxmedium){
+                        font-size: 32px;
+                    }
+                    @include breakpoint(xmedium){
+                        font-size: 28px;
+                    }
+                    @include breakpoint(ipad){
+                        font-size: 24px;
+                    }
+                    @include breakpoint(largeMobile){
+                        font-size: 20px;
+                    }
+                    i{
+                        font-weight: $bold;
+                        margin-left: 20px;
+                    }
+                }
+            }
+           
+        }
+        .copy-right{
+            margin-top: 74px;
+            display: flex;
+            justify-content: flex-end;
+            @include breakpoint(slarge){
+               width: 100%;
+                
+            }
+            @include breakpoint(xxxmedium){
+                margin-top: 50px;
+            
+            }
+            @include breakpoint(xmedium){
+                margin-top: 40px;
+            }
+            @include breakpoint(ipad){
+                margin-top: 30px;
+                justify-content: center;
+            }
+            p{
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.4);
+                @include breakpoint(slarge){
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+                @include breakpoint(large){
+                    font-size: 12px;
+                }
+                @include breakpoint(ipad){
+                    font-size: 10px;
+                }
+                a{
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, 0.4);
+                    display: inline-block;
+                    margin-left: 50px;
+                    position: relative;
+                    @include breakpoint(slarge){
+                        display: block;
+                        text-align: center;
+                        margin-left: 0 !important;
+                        &:after{
+                            display: none;
+                        }
+                        
+                    }
+                    @include breakpoint(large){
+                        font-size: 12px;
+                        margin-left: 40px;
+                    }
+                    @include breakpoint(xmedium){
+                        margin-left: 30px;
+                    }
+                    @include breakpoint(ipad){
+                        font-size: 10px;
+                        margin-left: 20px;
+                    }
+                    &:hover{
+                        color: $color-primary;
+                    }
+                    &::after{
+                        position: absolute;
+                        top: 4px;
+                        left: -25px;
+                        width: 2px;
+                        height: 17px;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        content: "";
+                        @include breakpoint(large){
+                            left: -20px;
+                        }
+                        @include breakpoint(xmedium){
+                            left: -15px;
+                            height: 13px;
+                        }
+                        @include breakpoint(ipad){
+                            height: 10px;
+                            top: 3px;
+                            left: -12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

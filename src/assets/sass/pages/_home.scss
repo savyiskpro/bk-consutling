@@ -1,0 +1,659 @@
+.home_banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: -132px;
+    top: 0px;
+    .down-arrow{
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include breakpoint(large){
+            bottom: 80px;
+        }
+        @include breakpoint(xxxmedium){
+            bottom: 60px;
+        }
+        @include breakpoint(xmedium){
+            bottom: 30px;
+        }
+        a{
+            font-size: 14px;
+            color: $color-white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 700;
+            transition: all .5s ease-in-out;
+            &:hover{
+                transform: translateY(-10px);
+            }
+            @include breakpoint(ipad){
+                font-size: 12px;
+            }
+            i{
+                margin-top: 20px;
+                @include breakpoint(ipad){
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    @include breakpoint(xxxmedium){
+        height: 630px;
+    }
+    @include breakpoint(xmedium){
+        height: 550px;
+    }
+    @include breakpoint(ipad){
+        height: 500px;
+        margin-top: 75px;
+    }
+    figure{
+        height: 100%;
+        img{
+            height: 100%;
+        }
+    }
+    h1{
+        font-size: 60px;
+        color: $color-white;
+        @include breakpoint(large){
+            font-size: 50px;
+        }
+        @include breakpoint(xxxmedium){
+            font-size: 45px;
+        }
+        @include breakpoint(xmedium){
+            font-size: 35px;
+        }
+        @include breakpoint(ipad){
+            font-size: 30px;
+        }
+    }
+    .btn{
+        background-color: $color-white;
+        color: $color-black;
+        &:hover{
+            color: $color-white;
+            img{
+                filter: brightness(1);
+                transform: rotate(0);
+            }
+        }
+        img{
+            filter: brightness(0.1);
+            transition: all .5s ease-in-out;
+        }
+    }
+    p{
+        color: $color-white;
+    }
+    .banner__text{
+        max-width: 590px;
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        transform: translateY(-50%);
+        @include breakpoint(ipad){
+            top: 50%;
+        }
+        p{
+            padding: 20px 0 40px 0;
+            @include breakpoint(xmedium){
+                padding: 15px 0 25px;
+            }
+        }
+    }
+}
+
+// experince css start here
+
+.experince{
+    padding: 85px 0 102px;
+    @media (max-width: 1280px){
+        padding: 65px 30px 80px 0;
+    }
+    @media (max-width: 1140px){
+        padding: 55px 30px 70px 0;
+    }
+    @media (max-width: 992px){
+        padding: 45px 25px 40px 0;
+    }
+    @media (max-width: 768px){
+        padding: 40px 0;
+    }
+    .container{
+        margin-left: 0;
+    }
+    h2{
+        color: #141414;
+    }
+    .row{
+        gap: 84px;
+        @media (max-width: 1280px){
+            gap: 60px;
+        }
+        @media(max-width: 1140px){
+            gap: 0px;
+            justify-content: space-between;
+        }
+    }
+   
+    .img__box{
+        width: 540px;
+        @media(max-width: 1280px){
+            width: 480px;
+        }
+        @media(max-width: 1140px){
+            width: 48%;
+        }
+        @media(max-width: 768px){
+            width: 100%;
+            margin-bottom: 30px;
+            padding-right: 25px;
+            max-width: 600px;
+        }
+    }
+    .text__box{
+        max-width: 640px;
+        @media(max-width: 1280px){
+            max-width: 566px;
+        }
+        @media(max-width: 1140px){
+            max-width: 566px;
+            width: 48%;
+        }
+        @media(max-width: 768px){
+            width: 100%;
+            padding: 0 25px;
+            max-width: 100%;
+        }
+    }
+    p{
+        padding: 55px 0;
+        @media(max-width: 1280px){
+            padding: 45px 0;
+        }
+        @media(max-width: 1140px){
+            padding: 35px 0;
+        }
+        @media(max-width: 992px){
+            padding: 30px 0;
+        }
+        @media(max-width: 768px){
+            padding: 25px 0;
+        }
+    }
+}
+
+
+// investor
+.investor{
+    @include breakpoint(ipad){
+        margin-top: 20px;
+    }
+    .img__box{
+        text-align: center;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    h3{
+        padding-bottom: 50px;
+        font-weight: $medium;
+        @include breakpoint(xxxmedium){
+            padding-bottom: 30px;
+        }
+        @include breakpoint(xmedium){
+            padding-bottom: 20px;
+        }
+    }
+}
+
+// service
+.service{
+    padding: 90px 0;
+    margin-top: 100px;
+    background-color: #fafafa;
+    @media(max-width: 1280px){
+        margin-top: 80px;
+        padding: 75px 0;
+    }
+    @media(max-width: 1140px){
+        margin-top: 60px;
+        padding: 60px 0;
+    }
+    @media(max-width: 992px){
+        margin-top: 25px;
+        padding: 35px 0;
+    }
+    @include breakpoint(ipad){
+        margin-top: 10px;
+        padding: 30px 0;
+    }
+    .s-text{
+        max-width: 800px;
+        p{
+            padding: 35px 0 89px;
+            @include breakpoint(xxxmedium){
+                padding: 25px 0 70px;
+            }
+            @include breakpoint(xmedium){
+                padding-bottom: 55px;
+            }
+            @include breakpoint(ipad){
+                padding-bottom: 35px;
+            }
+        }
+    }
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 86px;
+        @include breakpoint(large){
+            gap: 75px;
+        }
+        @include breakpoint(xxxmedium){
+            gap: 55px;
+        }
+        @include breakpoint(xmedium){
+            gap: 50px 30px;
+        }
+        @include breakpoint(ipad){
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        .half__line{
+            @include breakpoint(large){
+                margin-top: 20px;
+            }
+            @include breakpoint(xmedium){
+                margin-top: 10px;
+            }
+        }
+    }
+    .col{
+        display: flex;
+        flex-wrap: wrap;
+        &.get_touch{
+            padding-left: 110px;
+            flex-direction: column;
+            @include breakpoint(ipad){
+                padding-left: 0px;
+                justify-content: center;
+                align-items: center;
+            }
+            .btn{
+                height: 80px;
+                margin-top: 30px;
+            }
+        }
+        .icon{
+            width: 47px;
+            margin-top: 30px;
+            @include breakpoint(ipad){
+                margin-top: 15px;
+            }
+            figure{
+                width: 36px;
+                height: 36px;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    top: 5px;
+                    right: -7px;
+                    content: "";
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    background: #0761CE;
+                    opacity: 0.2;
+                }
+            }
+        }
+        .text{
+            width: calc(100% - 50px);
+            padding: 0 0 0 63px;
+            position: relative;
+            @include breakpoint(xmedium){
+                padding-left: 45px;
+            }
+            &::after{
+                height: 108px;
+                width: 6px;
+                background-color: $color-primary;
+                content: "";
+                top: 0;
+                left: 30px;
+                position: absolute;
+                @include breakpoint(xmedium){
+                    left: 15px;
+                }
+                @include breakpoint(ipad){
+                    height: 70px;
+                }
+            }
+            p{
+                padding: 30px 0;
+                font-size: 16px;
+                @include breakpoint(xxxmedium){
+                    padding: 25px 0;
+                }
+                @include breakpoint(xmedium){
+                    padding: 15px 0;
+                    font-size: 15px;
+                }
+            }
+        }
+        h3{
+            color: $color-black;
+        }
+    }
+}
+
+// expert css start here
+
+.expert{
+    padding: 110px 0 130px;
+    position: relative;
+    @include breakpoint(large){
+        padding: 90px 0 110px;
+    }
+    @include breakpoint(xxxmedium){
+        padding: 70px 0 90px;
+    }
+    @include breakpoint(xmedium){
+        padding: 60px 0 70px;
+    }
+    @include breakpoint(ipad){
+        padding: 45px 0;
+    }
+    @include breakpoint(largeMobile){
+        padding: 30px 0;
+    }
+    .container{
+        max-width: 1140px;
+    }
+    .col{
+        width: 47%;
+        position: relative;
+        @include breakpoint(xmedium){
+            width: 100%;
+        }
+        &:nth-of-type(2){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            @include breakpoint(large){
+                align-items: center;
+            }
+            @include breakpoint(xmedium){
+                margin-top: 30px;
+            }
+        }
+        .detail__box{
+            ul{
+                max-width: 380px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                position: relative;
+                z-index: 9;
+                margin-top: -14px;
+                @include breakpoint(ipad){
+                    max-width: 240px;
+                }
+                h6{
+                    font-size: 20px;
+                    font-weight: 400;
+                    @include breakpoint(xmedium){
+                        font-size: 18px;
+                    }
+                    @include breakpoint(ipad){
+                        font-size: 16px;
+                    }
+                }
+                span{
+                    font-size: 14px;
+                    color: $color-primary;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+            li{
+                margin-right: 27px;
+                i{
+                    font-size: 34px;
+                    color: $color-primary;
+                    @include breakpoint(ipad){
+                        font-size: 28px;
+                    }
+                }
+                &:nth-of-type(2){
+                    width: 248px;
+                    margin-right: 0px;
+                    padding: 18px 24px;
+                    background: #FFFFFF;
+                    border: 1px solid #0761CE;
+                    @include breakpoint(xmedium){
+                        padding: 10px 19px;
+                    }
+                }
+            }
+        }
+        figure{
+            max-width: 380px;
+            position: relative;
+            z-index: 9;
+            &::after{
+                position: absolute;
+                bottom: -60px;
+                right: -65px;
+                width: 282px;
+                height: 272px;
+                background-color: $color-primary;
+                z-index: -1;
+                content: "";
+                @include breakpoint(ipad){
+                    right: -24px;
+                    bottom: -32px;
+                }
+            }
+        }
+        h2{
+            margin-top: 35px;
+            @include breakpoint(ipad){
+                margin-top: 20px;
+            }
+        }
+        .btn{
+            margin-top: 30px;
+        }
+        p{
+            padding: 30px 0 0;
+            @include breakpoint(xxxmedium){
+                padding-top: 20px;
+            }
+            &:nth-of-type(2){
+                padding: 20px 0 0;
+            }
+        }
+    }
+}
+
+// blog
+
+.latest__news{
+    .slider__wrapper{
+        margin-top: 65px;
+        @include breakpoint(xxxmedium){
+            margin-top: 55px;
+        }
+        @include breakpoint(xmedium){
+            margin-top: 45px;
+        }
+        @include breakpoint(ipad){
+            margin-top: 30px;
+        }
+    }
+    .container{
+        max-width: 1240px;
+    }
+    .draggable{
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 35%;
+        left: 0px;
+        transform: translateY(-50%);
+        font-size: 0px;
+        outline: none;
+        border: none;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        z-index: 9;
+        @include breakpoint(xxxmedium){
+            left: -20px;
+        }
+        @include breakpoint(xmedium){
+            left: 0px;
+        }
+        &::after{
+            content: "\f104";
+            color: #000;
+            position: absolute;
+            font-family: fontAwesome;
+            top: 50%;
+            left: 50%;
+            font-size: 25px;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+            
+        }
+        &.slick-next{
+            left: auto;
+            right: 0px;
+            @include breakpoint(xxxmedium){
+                right: -20px;
+            }
+            @include breakpoint(xmedium){
+                right: 0px;
+            }
+            &::after{
+                transform: translate(-50%, -50%)rotate(180deg);
+            }
+        }
+    }
+    .news__img{
+        max-width: 285px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(ipad){
+            max-width: 80%;
+        }
+        @include breakpoint(xsmall){
+            max-width: 85%;
+        }
+        h4{
+            font-weight: 600;
+            margin: 25px 0 36px;
+            color: $color-black;
+            min-height: 72px;
+            @include breakpoint(xxxmedium){
+                margin: 20px 0 30px;
+            }
+            @include breakpoint(xmedium){
+                margin: 15px 0 20px;
+            }
+        }
+        span{
+            color: $color-black;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        img{
+            border-radius: 10px;
+        }
+    }
+}
+
+.intersted__carrer{
+    padding: 95px 0;
+    margin-top: 120px;
+    background-color: #000066;
+    @include breakpoint(large){
+        margin-top: 100px;
+        padding: 85px 0;
+    }
+    @include breakpoint(xxxmedium){
+        margin-top: 80px;
+        padding: 75px 0;
+    }
+    @include breakpoint(xmedium){
+        margin-top: 60px;
+        padding: 65px 0;
+    }
+    @include breakpoint(ipad){
+        margin-top: 30px;
+        padding: 45px 0;
+    }
+    .container{
+        max-width: 1167px;
+    }
+    li{
+        @include breakpoint(ipad){
+            width: 100%;
+            &:nth-of-type(2){
+                margin-top: 30px;
+            }
+        }
+    }
+    h2{
+        font-size: 36px;
+        color: $color-white;
+        @include breakpoint(large){
+            font-size: 34px;
+        }
+        @include breakpoint(xxxmedium){
+            font-size: 30px;
+        }
+        @include breakpoint(xmedium){
+            font-size: 26px;
+        }
+        @include breakpoint(ipad){
+            font-size: 24px;
+        }
+        @include breakpoint(largeMobile){
+            font-size: 20px;
+            br{
+                display: none;
+            }
+        }
+
+
+    }
+    p{
+        color: $color-white;
+        margin-top: 20px;
+    }
+    .btn{
+        background-color: $color-white;
+        color: $color-black;
+        width: 240px;
+        &:hover{
+            color: #fff;
+            img{
+                filter: invert(1);
+            }
+        }
+        @include breakpoint(ipad){
+            width: 200px;
+        }
+    }
+}

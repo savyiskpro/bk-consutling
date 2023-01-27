@@ -1,0 +1,249 @@
+.contact_banner{
+    height: 480px;
+    @include breakpoint(ipad){
+        height: 400px;
+    }
+    .container{
+        max-width: 1140px;
+    }
+    h1{
+        font-size: 47px;
+        @include breakpoint(large){
+            font-size: 42px;
+        }
+        @include breakpoint(xxxmedium){
+            font-size: 38px;
+        }
+        @include breakpoint(xmedium){
+            font-size: 34px;
+        }
+        @include breakpoint(ipad){
+            font-size: 30px;
+        }
+        @include breakpoint(largeMobile){
+            font-size: 25px;
+        }
+    }
+    .banner__text{
+        max-width: 690px;
+        top: 58%;
+        p{
+            br{
+                @include breakpoint(ipad){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.contact__form{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 66px rgba(0, 0, 0, 0.06);
+    border-radius: 22px;
+    padding: 62px 86px 80px;
+    position: relative;
+    z-index: 9;
+    max-width: 1140px;
+    margin: -70px auto 16px;
+    @include breakpoint(large){
+        margin-top: -60px;
+        padding: 50px 75px 70px;
+        max-width: 90%;
+    }
+    @include breakpoint(xxxmedium){
+        margin-top: -50px;
+        padding: 40px 55px 60px;
+        max-width: 92%;
+    }
+    @include breakpoint(xmedium){
+        margin-top: -40px;
+        padding: 30px 35px 50px;
+        max-width: 92%;
+    }
+    @include breakpoint(largeMobile){
+        padding: 30px 25px 30px;
+    }
+    @include breakpoint(xsmall){
+        padding: 30px 20px 30px;
+    }
+    .btn{
+        @include breakpoint(ipad){
+            width: 150px;
+        }
+        @include breakpoint(largeMobile){
+            width: 120px;
+        }
+    }
+}
+.pop-up{
+    transition: all .5s ease-in-out;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    z-index: 99999999999999999;
+    &.active{
+        transform: translate(-50%, -50%)scale(1); 
+    }
+}
+
+.pop__up__inner{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.11);
+    border-radius: 25px;
+    max-width: 1320px;
+    height: 100vh;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 70px 100px;
+    position: relative;
+    &::-webkit-scrollbar {
+        width: 1px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #fff;
+    }
+    @include breakpoint(mac){
+        max-width: 95%;
+        padding: 65px 80px;
+    }
+    @include breakpoint(large){
+        padding: 60px 70px;
+    }
+    @include breakpoint(xxxmedium){
+        padding: 50px 60px;
+    }
+    @include breakpoint(xmedium){
+        padding: 40px 45px;
+    }
+    @include breakpoint(ipad){
+        padding: 35px;
+    }
+    .cross_btn{
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        border: 1px solid #D8D8D8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: 84px;
+        right: 100px;
+        transition: all .5s ease-in-out;
+        &:hover{
+            border-color: $color-primary;
+            span{
+                background-color: #000066;
+            }
+        }
+        @include breakpoint(large){
+            right: 70px;
+            top: 70px;
+        }
+        @include breakpoint(xxxmedium){
+            right: 60px;
+            top: 65px;
+        }
+        @include breakpoint(xmedium){
+            right: 45px;
+            top: 40px;
+        }
+        @include breakpoint(ipad){
+            right: 35px;
+        }
+        span{
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: $color-black;
+            transform: rotate(45deg);
+            transition: all .5s ease-in-out;
+            margin-top: -1px;
+            &:nth-of-type(2){
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .form_inner{
+        .form-group{
+            margin-bottom: 55px;
+            position: relative;
+            @include breakpoint(large){
+                margin-bottom: 45px;
+            }
+            @include breakpoint(xxxmedium){
+                margin-bottom: 35px;
+            }
+            @include breakpoint(xmedium){
+                margin-bottom: 30px;
+            }
+            .form-control{
+                font-size: 14px;
+                font-family: $font-family-body;
+                font-weight: 600;
+                
+                &::placeholder{
+                    font-size: 14px;
+                    font-family: $font-family-body;
+                    font-weight: 600;
+                }
+
+                &:focus, &:not(:placeholder-shown){
+                    +label{
+                        transform: translateY(-17px);
+                        left: 0;
+                        opacity: 1;
+                    }
+                }
+
+            }
+            label{
+                // transform: translateY(30px);
+                transition: all 0.5s;
+                display: inline-block;
+                position: absolute;
+                left: 10px;
+                top: 0;
+                transition: all 0.5s;
+                opacity: 0.2;
+            }
+        }
+    }
+    .text{
+        margin-top: 30px;
+        h6, p{
+            font-weight: 600;
+            font-size: 14px;
+            color: rgba(0,0,0,.3);
+            @include breakpoint(xmedium){
+                font-size: 13px;
+            }
+            @include breakpoint(ipad){
+                font-size: 12px;
+            }
+        }
+        p{
+            padding-top: 10px;
+            @include breakpoint(xmedium){
+                padding-top: 5px;
+            }
+        }
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 50px;
+        color: #000066;
+        @include breakpoint(large){
+            margin-bottom: 40px;
+        }
+        @include breakpoint(xmedium){
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,545 @@
+.about_banner {
+  height: 400px;
+  @include breakpoint(xmedium) {
+    height: 360px;
+  }
+  h1 {
+    font-size: 80px;
+    @include breakpoint(large) {
+      font-size: 70px;
+    }
+    @include breakpoint(xxxmedium) {
+      font-size: 60px;
+    }
+    @include breakpoint(xmedium) {
+      font-size: 50px;
+    }
+    @include breakpoint(ipad) {
+      font-size: 40px;
+    }
+  }
+  .banner__text {
+    top: 60%;
+    @include breakpoint(ipad) {
+      top: 50%;
+    }
+  }
+}
+
+.about_expert {
+  padding-bottom: 0px;
+  margin-top: 20px;
+  @include breakpoint(xmedium) {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+  .trangle {
+    @include breakpoint(large) {
+      bottom: -102px;
+    }
+    @include breakpoint(xxxmedium) {
+      bottom: -82px;
+    }
+    @include breakpoint(xmedium) {
+      bottom: -62px;
+    }
+  }
+  .col {
+    h2 {
+      @include breakpoint(xmedium) {
+        margin-top: 25px;
+      }
+      @include breakpoint(ipad) {
+        margin-top: 20px;
+      }
+    }
+
+    figure {
+      &::after {
+        height: 440px;
+        bottom: -200px;
+        @include breakpoint(xmedium) {
+          height: 340px;
+          bottom: -113px;
+          width: 260px;
+        }
+        @include breakpoint(ipad) {
+          height: 280px;
+          bottom: -83px;
+        }
+        @include breakpoint(largeMobile) {
+          height: 240px;
+          bottom: -83px;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+  .trangle {
+    @include breakpoint(xsmall) {
+      display: none;
+    }
+  }
+}
+
+// Service page css start her
+
+.services__bring {
+  padding: 100px 0 116px;
+  position: relative;
+  @include breakpoint(large) {
+    padding: 90px 0 100px;
+  }
+  @include breakpoint(xxxmedium) {
+    padding: 70px 0 80px;
+  }
+  @include breakpoint(xmedium) {
+    padding: 50px 0 70px;
+  }
+  @include breakpoint(ipad) {
+    padding: 35px 0px;
+    &.carrers {
+      padding-top: 30px;
+    }
+  }
+  .text {
+    max-width: 800px;
+    h2 {
+      margin: 0px 0 50px;
+      @include breakpoint(xxxmedium) {
+        margin-bottom: 35px;
+      }
+      @include breakpoint(ipad) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .row {
+    max-width: 1020px;
+    margin-top: 100px;
+    gap: 90px;
+    position: relative;
+    justify-content: space-between;
+    @include breakpoint(large) {
+      margin-top: 80px;
+      gap: 60px;
+    }
+    @include breakpoint(xxxmedium) {
+      margin-top: 50px;
+      gap: 40px;
+    }
+    @include breakpoint(ipad) {
+      margin-top: 30px;
+      gap: 20px;
+    }
+    .text-box {
+      width: 407px;
+      margin: 0;
+      @include breakpoint(ipad) {
+        width: 100%;
+      }
+    }
+    .img-box {
+      width: calc(100% - 497px);
+      @include breakpoint(ipad) {
+        width: 100%;
+        margin-top: 10px;
+      }
+      img {
+        border-radius: 32px 32px 0 0;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: $medium;
+      padding-top: 26px;
+      @include breakpoint(xmedium) {
+        font-size: 15px;
+        padding-top: 15px;
+      }
+    }
+    .btn {
+      margin-top: 40px;
+      justify-content: center;
+    }
+  }
+  .trangle {
+    border: none;
+    right: 0;
+    left: auto;
+    bottom: 0px;
+    border-bottom: 434px solid #003b8e;
+    border-left: 253px solid transparent;
+    @include breakpoint(xxxmedium) {
+      border-left: 153px solid transparent;
+      border-bottom: 300px solid #003b8e;
+    }
+    @include breakpoint(xmedium) {
+      border-left: 153px solid transparent;
+      border-bottom: 153px solid #003b8e;
+    }
+    @include breakpoint(ipad) {
+      border-left: 120px solid transparent;
+      border-bottom: 120px solid #003b8e;
+    }
+  }
+}
+.engineering {
+  position: relative;
+  background-color: #cacaca;
+  .cricle {
+    position: absolute;
+    top: -40px;
+    background-color: rgba(7, 97, 206, 0.1);
+    width: 344px;
+    border-radius: 50%;
+    left: -250px;
+    height: 344px;
+  }
+  .row {
+    margin-top: 0px;
+    @include breakpoint(ipad) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.data_architecture {
+  padding-bottom: 0;
+  max-width: 1240px;
+  margin: 0 auto;
+  margin-bottom: -20px;
+  .detail {
+    max-width: 450px;
+    @include breakpoint(ipad) {
+      max-width: 100%;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 22px 0 0;
+  }
+  .btn {
+    margin-top: 30px;
+  }
+}
+
+// carrers page css
+.carrers {
+  max-width: 1005px;
+  margin: 0 auto;
+  padding-bottom: 0px;
+  .serch_filter {
+    margin: 60px 0 40px;
+    @include breakpoint(ipad) {
+      margin-top: 40px;
+    }
+    ul {
+      margin-top: 20px;
+      li {
+        font-weight: 500;
+        font-size: 12px;
+        color: $color-black;
+      }
+    }
+    .serch-btn {
+      width: 170px;
+      @include breakpoint(ipad) {
+        margin-top: 30px;
+      }
+      .btn {
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        height: 63px;
+      }
+    }
+    .form_section {
+      width: calc(100% - 190px);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-right: 20px;
+      @include breakpoint(ipad) {
+        width: 100%;
+        margin-right: 0px;
+      }
+    }
+    .form-group {
+      background-color: #fff;
+      border: 1px solid #f3f3f3;
+      box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.07);
+      display: flex;
+      align-items: center;
+      width: calc(100% - 260px);
+      padding: 11px 20px;
+      margin-right: 15px;
+      transition: all 0.5s ease-in-out;
+      @include breakpoint(xmedium) {
+        width: calc(100% - 215px);
+      }
+      @include breakpoint(ipad) {
+        width: 100%;
+        margin-right: 0px;
+      }
+      &:nth-of-type(2) {
+        width: 245px;
+        margin-right: 0px;
+        @include breakpoint(xmedium) {
+          width: 200px;
+        }
+        @include breakpoint(ipad) {
+          width: 100%;
+          margin-top: 30px;
+        }
+      }
+      img {
+        width: 20px;
+        margin-right: 14px;
+      }
+      .from-control {
+        width: calc(100% - 20px);
+        transition: all 0.5s ease-in-out;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        color: #000;
+        padding: 12px 0;
+        &::placeholder {
+          font-weight: 500;
+          color: $color-black;
+        }
+      }
+    }
+  }
+  @include breakpoint(xxxmedium) {
+    max-width: 90%;
+  }
+  @include breakpoint(xmedium) {
+    max-width: 95%;
+  }
+  @include breakpoint(ipad) {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+  .text {
+    max-width: 940px;
+    h2 {
+      margin: 0 0 35px;
+    }
+    b {
+      color: $color-primary;
+    }
+  }
+  .accrodian__box {
+    padding: 30px 80px 30px 45px;
+    background: #ffffff;
+    box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.12);
+    margin-top: 20px;
+    @include breakpoint(xxxmedium) {
+      padding: 25px 60px 25px 35px;
+    }
+    @include breakpoint(xmedium) {
+      padding: 25px 30px;
+    }
+    @include breakpoint(ipad) {
+      padding: 25px 20px;
+    }
+
+    .accordion-title {
+      cursor: pointer;
+      &.open {
+        .applybtn {
+          display: flex;
+        }
+        .readmore {
+          display: none;
+        }
+      }
+      .applybtn {
+        display: none;
+      }
+      .readmore {
+        // display: none;
+        display: flex;
+        color: $color-primary;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: $color-black;
+          img {
+            transform: rotate(-25deg);
+          }
+        }
+        @include breakpoint(largeMobile) {
+          font-size: 15px;
+        }
+        img {
+          margin-left: 10px;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+          width: calc(100% - 180px);
+          display: flex;
+          flex-wrap: wrap;
+          @include breakpoint(ipad) {
+            width: calc(100% - 140px);
+          }
+          @include breakpoint(xsmall) {
+            width: 100%;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+            font-size: 14px;
+            @include breakpoint(ipad) {
+              font-size: 13px;
+            }
+            @include breakpoint(largeMobile) {
+              font-size: 12px;
+              margin-right: 20px;
+            }
+            img {
+              margin-right: 5px;
+            }
+            &:nth-last-of-type(1) {
+              margin-right: 0px;
+            }
+          }
+          h6 {
+            margin-bottom: 14px;
+            font-weight: 600;
+            color: $color-black;
+            width: 100%;
+            @include breakpoint(xmedium) {
+              margin-bottom: 10px;
+            }
+            @include breakpoint(ipad) {
+              font-size: 15px;
+              margin-bottom: 4px;
+            }
+            @include breakpoint(largeMobile) {
+              font-size: 13px;
+            }
+          }
+          &:nth-of-type(2) {
+            width: 180px;
+            justify-content: flex-end;
+            @include breakpoint(ipad) {
+              width: 140px;
+            }
+            @include breakpoint(xsmall) {
+              width: 100%;
+              justify-content: flex-start;
+              margin-top: 20px;
+            }
+          }
+          .btn {
+            justify-content: center;
+            width: 170px;
+          }
+        }
+      }
+    }
+    .applybtn {
+      justify-content: center;
+      position: absolute;
+      right: 60px;
+      top: 18px;
+      width: 170px;
+      @include breakpoint(xmedium) {
+        right: 29px;
+        top: 26px;
+      }
+      @include breakpoint(ipad) {
+        width: 120px;
+        right: 20px;
+      }
+      @include breakpoint(xsmall) {
+        top: auto;
+        bottom: 20px;
+      }
+    }
+    .text {
+      margin-top: 80px;
+      @include breakpoint(xxxmedium) {
+        margin-top: 60px;
+      }
+      @include breakpoint(xmedium) {
+        margin-top: 50px;
+      }
+      @include breakpoint(ipad) {
+        margin-top: 40px;
+      }
+    }
+    .accordion-content {
+      display: none;
+      @include breakpoint(xsmall) {
+        padding-bottom: 90px;
+      }
+      &.active {
+        display: block;
+      }
+    }
+    h5 {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #000;
+      @include breakpoint(ipad) {
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+    }
+    p {
+      font-size: 14px;
+      @include breakpoint(ipad) {
+        font-size: 13px;
+      }
+    }
+    .box_wrapper {
+      margin-top: 45px;
+      .box {
+        width: 46%;
+        margin-bottom: 35px;
+        @include breakpoint(xmedium) {
+          width: 48%;
+          margin-bottom: 25px;
+        }
+        @include breakpoint(ipad) {
+          width: 100%;
+          margin-bottom: 25px;
+        }
+        li {
+          font-size: 14px;
+          font-weight: 400;
+          position: relative;
+          padding-left: 10px;
+          &::after {
+            position: absolute;
+            top: 10px;
+            content: "";
+            left: 0px;
+            width: 5px;
+            height: 5px;
+            background-color: $color-black;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.from-control {
+  &::placeholder {
+    font-family: $font-family-body;
+  }
+}

@@ -1,0 +1,309 @@
+header {
+  position: relative;
+  z-index: 99;
+  padding: 35px 0;
+  &.active {
+    z-index: 9999;
+    .logo,
+    nav {
+      opacity: 0;
+      @include breakpoint(ipad) {
+        opacity: 1;
+      }
+    }
+  }
+  @include breakpoint(xmedium) {
+    padding: 25px 0;
+  }
+  @include breakpoint(ipad) {
+    position: fixed;
+    top: 0;
+    padding: 15px 0;
+    width: 100%;
+    background-color: $color-black;
+  }
+  .toggle {
+    width: 61px;
+    height: 61px;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    @include breakpoint(xmedium) {
+      width: 55px;
+      height: 55px;
+    }
+    @include breakpoint(ipad) {
+      display: flex;
+      position: relative;
+      z-index: 99;
+      width: 45px;
+      height: 45px;
+      padding: 8px;
+      // justify-content: center;
+      margin-left: auto;
+    }
+    span {
+      height: 2px;
+      background-color: $color-primary;
+      width: 30px;
+      &:nth-of-type(2) {
+        width: 15px;
+        margin: 4px 0 0 auto;
+      }
+    }
+    &.active {
+      span {
+        width: 30px;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(-45deg);
+        &:nth-of-type(2) {
+          transform: rotate(45deg);
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+  .logo {
+    @include breakpoint(ipad) {
+      width: 150px;
+    }
+  }
+  nav {
+    margin-left: auto;
+    // &.active{
+    //     transition: all 1s ease-in-out;
+    //     visibility: hidden;
+    //     opacity: 0;
+    // }
+    @include breakpoint(ipad) {
+      // display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      max-width: 400px;
+      width: 100%;
+      z-index: 99;
+      height: 100vh;
+      background-color: $color-primary;
+      transition: all 1s ease-in-out;
+      -webkit-clip-path: circle(30px at 110% -15px);
+      clip-path: circle(30px at 120% -15px);
+      &.active {
+        right: 0px;
+        -webkit-clip-path: circle(70.7% at 50% 50%);
+        clip-path: circle(70.7% at 50% 50%);
+        visibility: visible;
+        opacity: 1;
+      }
+      ul {
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        li {
+          margin: 0 0 20px 0;
+          &:nth-last-of-type(1) {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    .toggle {
+      display: flex;
+      @include breakpoint(ipad) {
+        display: none;
+      }
+    }
+  }
+
+  li {
+    margin-right: 45px;
+    @include breakpoint(xmedium) {
+      margin-right: 20px;
+    }
+    &:last-of-type {
+      display: none;
+    }
+    &.active {
+      a {
+        color: $color-black;
+      }
+    }
+    a {
+      font-size: 16px;
+      font-weight: $samiBold;
+      color: $color-white;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        border-bottom: solid 1px $color-white;
+      }
+      &.active {
+        border-bottom: solid 1px $color-white;
+      }
+    }
+    &:nth-last-of-type(1) {
+      margin-right: 0px;
+    }
+  }
+}
+
+.main-menu {
+  position: fixed;
+  background-color: #003b8d;
+  color: #fff;
+  z-index: 999;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  // padding-top: 180px;
+  transition: all 0.5s;
+
+  &.active {
+    top: 0;
+  }
+  @include breakpoint(ipad) {
+    display: none;
+  }
+  .inner-box {
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+    position: relative;
+    // height: calc(100% - 180px);
+    height: 100%;
+    @include breakpoint(slarge) {
+      width: 800px;
+    }
+    @include breakpoint(xmedium) {
+      width: 600px;
+    }
+  }
+  a {
+    color: #fff;
+  }
+  .box {
+    width: 50%;
+  }
+  .copyright-text {
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    opacity: 0.4;
+    font-size: 14px;
+  }
+  .logo {
+    width: 400px;
+    margin-bottom: 50px;
+    a {
+      width: 100%;
+    }
+    @include breakpoint(slarge) {
+      margin-bottom: 30px;
+      width: 300px;
+    }
+  }
+  .extra-links {
+    li {
+      position: relative;
+      margin-bottom: 30px;
+      @include breakpoint(slarge) {
+        margin-bottom: 10px;
+      }
+      > img {
+        filter: contrast(0) brightness(10);
+        position: absolute;
+        left: 0;
+        top: 8px;
+        @include breakpoint(slarge) {
+          width: 20px;
+          top: 3px;
+        }
+      }
+      a {
+        display: block;
+        margin-left: 40px;
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        @include breakpoint(slarge) {
+          font-size: 16px;
+          margin-left: 30px;
+        }
+      }
+      .btn {
+        width: 300px;
+        text-align: center;
+        justify-content: center;
+        background-color: $color-white;
+        color: $color-black;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 50px;
+        font-family: $font-family-body;
+        &:hover {
+          color: $color-white;
+          img {
+            filter: contrast(0) brightness(10);
+          }
+        }
+        @include breakpoint(slarge) {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  .main-nav {
+    li {
+      text-align: right;
+      margin-bottom: 30px;
+      @include breakpoint(slarge) {
+        margin-bottom: 20px;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      a {
+        opacity: 0.5;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1;
+        position: relative;
+        @include breakpoint(slarge) {
+          font-size: 30px;
+        }
+        &:after {
+          position: absolute;
+          top: 50%;
+          left: calc(100% + 20px);
+          width: 50px;
+          height: 3px;
+          content: "";
+          @include breakpoint(slarge) {
+            width: 30px;
+            left: calc(100% + 10px);
+          }
+        }
+        &.active {
+          opacity: 1;
+          &:after {
+            background-color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// html {
+//   overflow-x: hidden;
+//   &.active {
+//     overflow: hidden;
+//   }
+// }

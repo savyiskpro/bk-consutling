@@ -1,0 +1,72 @@
+.btn{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: $color-white;
+    background-color: $color-primary;
+    border: none;
+    outline: none;
+    width: 200px;
+    padding: 26px 20px;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    @include breakpoint(ipad){
+      justify-content: center;
+      width: 170px;
+      padding: 18px;
+      font-size: 16px;
+    }
+    &::after{
+      position: absolute;
+      top: 0;
+      left: -100%;
+      background-color: #000;
+      content: "";
+      width: 100%;
+      z-index: -1;
+      height: 100%;
+      transition: all .5s ease-in-out;
+    }
+    &:hover{
+      // background-color: $color-black;
+      color: #fff;
+      img{
+        transform: rotate(0);
+      }
+      &::after{
+        left: 0px;
+        color: #fff;
+      }
+    }
+    @include breakpoint(xxmedium){
+      padding: 20px 18px;
+    }
+    @include breakpoint(xmedium){
+      font-size: 16px;
+    }
+    img{
+        transform: rotate(-32deg);
+        margin-left: 10px;
+        transition: all .5s ease-in-out;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}

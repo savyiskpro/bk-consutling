@@ -1,0 +1,102 @@
+// Breakpoint
+$xxsmall: 360px !default;
+$xsmall: 480px !default;
+$largeMobile: 576px !default;
+$small: 767px !default;
+$ipad: 767px !default;
+$xmedium: 992px !default;
+$xxmedium: 1024px !default;
+$xxxmedium: 1140px !default;
+$slarge: 1200px !default;
+$large: 1280px !default;
+$mac: 1366px !default;
+$xxlarge: 1440px !default;
+$xxxlarge: 1600px !default;
+$xxxxlarge: 1800px !default;
+
+
+// Spacing
+$spacing-base: 15px;
+$spacing-double: $spacing-base * 2;
+$spacing-triple: $spacing-base * 3;
+$spacing-four: $spacing-base * 4;
+$spacing-half: $spacing-base/2;
+$spacing-quarter: $spacing-half/2;
+
+// Container
+$container: 1300px !default;
+$container-sm: 1260px !default;
+$container-lg: 1800px !default;
+$container-sl: 1520px !default;
+
+// Width
+$width-full: 100% !default;
+$width-half: $width-full / 2 !default;
+$width-25: $width-full / 4 !default;
+$width-75: $width-full - $width-25 !default;
+$full-height: $width-full;
+
+// Font Family
+$font-family-body: 'Montserrat';
+
+
+
+// Typography
+$font-size-body: 18px !default;
+$font-size-h1: 80px !default;
+$font-size-h2: 32px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 20px !default;
+$font-size-h5: 21px !default;
+$font-size-h6: 18px !default;
+$font-size-xsm: 14px;
+$font-size-sm: 16px;
+$font-size-lg: 18px;
+
+
+// Font Weight
+$xlight: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$samiBold: 600;
+$bold: 700;
+$xbold: 900;
+
+//Font Style
+$italic: italic;
+$normal: normal;
+
+// Colors
+$color-primary: #0761CE;
+$color-dark-grey: #2B343A;
+$color-light-pink: #F2C4B2;
+$color-dark-org: #1BA3DD;
+$color-org: #E95729;
+
+
+// main color
+$color-red: #EB4537;
+$color-red-light: #FEF4EA;
+$color-secondary: #141414;
+$color-yellow: #FFC748;
+$color-black: #000000;
+$color-white: #fff;
+
+// Breakpoints
+$breakpoints: (
+  xsmall: $xsmall,
+  xxsmall: $xxsmall,
+  small: $small,
+  largeMobile: $largeMobile,
+  ipad: $ipad,
+  xmedium: $xmedium,
+  xxmedium: $xxmedium,
+  xxxmedium: $xxxmedium,
+  large: $large,
+  slarge: $slarge,
+  mac: $mac,
+  xxlarge: $xxlarge,
+  xxxlarge: $xxxlarge,
+  xxxxlarge: $xxxxlarge,
+);

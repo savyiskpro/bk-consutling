@@ -1,0 +1,151 @@
+.form-control{
+    outline: none;
+    font-family: $font-family-body;
+    &::placeholder{
+        font-family: $font-family-body;
+    }
+}
+
+.form_inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .form-group{
+        width: 48%;
+        margin-bottom: 30px;
+        &:nth-last-of-type(1){
+            margin-bottom: 0px;
+        }
+        @include breakpoint(xxxmedium){
+            margin-bottom: 20px;
+        }
+        @include breakpoint(ipad){
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &.check__box{
+            display: flex;
+            justify-content: flex-end;
+            label{
+                margin: 0;
+            }
+            .check{
+                display: flex;
+                align-items: center;
+                padding-right: 110px;
+                @include breakpoint(xxxmedium){
+                    padding-right: 80px;
+                }
+                @include breakpoint(xmedium){
+                    padding-right: 50px;
+                }
+                @include breakpoint(ipad){
+                    padding-right: 30px;
+                }
+                input[type="checkbox" i] {
+                    width: 21px;
+                    height: 21px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        label{
+            font-size: 14px;
+            font-weight: $medium;
+            display: block;
+            margin-bottom: 5px;
+            @include breakpoint(largeMobile){
+                font-size: 13px;
+            }
+        }
+        textarea{
+            resize: none;
+            min-height: 120px;
+            @include breakpoint(xxxmedium){
+                min-height: 90px;
+            }
+        }
+        .btn{
+            justify-content: center;
+        }
+        .form-control{
+            width: 100%;
+            color: #000000;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid $color-black;
+            padding-bottom: 4px;
+            transition: all .5s ease-in-out;
+            &:hover{
+                border-color: $color-primary;
+                color: $color-primary;
+            }
+            &::placeholder{
+                color: #E8E8E8;
+            }
+        }
+        &.full{
+            width: 100%;
+        }
+    }
+}
+
+.upload-box{
+    label{
+        opacity: 0.2;
+        transform: translateY(0) !important;
+        position: static !important;
+        display: block !important;
+    // transform: translateY(-17px);
+    }
+}
+
+.file-upload {
+    position: relative;
+    display: inline-block;
+    label{
+        opacity: 1 !important;
+        display: flex;
+        margin-top: 15px;
+
+        span{
+            width: 270px;
+            font-size: 14px;
+            border-bottom: solid 1px $color-black;
+            margin-right: 25px;
+            padding-bottom: 5px;
+            @include breakpoint(ipad){
+                width: calc(100% - 100px);
+                margin-right: 10px;
+            }
+        }
+        button{
+            border: none;
+            color: $color-white;
+            background-color: #0761CE;
+            font-family: $font-family-body;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+    }
+    [type="file"] {
+        position: absolute;
+        z-index: 99999;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: block;
+        opacity: 0;
+        cursor: pointer;
+        &:hover{
+            + label button{
+                background-color: #003B8D;
+            }
+        }
+    }
+   
+}

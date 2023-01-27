@@ -1,0 +1,122 @@
+body {
+  font-family: $font-family-body;
+  font-weight: 400;
+  font-size: $font-size-body;
+  color: $color-black;
+  background-color: $color-white;
+}
+// html {
+//   overflow-x: hidden;
+// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-secondary;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  @include breakpoint(large) {
+    font-size: 70px;
+  }
+  @include breakpoint(xxxmedium) {
+    font-size: 60px;
+  }
+  @include breakpoint(xmedium) {
+    font-size: 55px;
+  }
+  @include breakpoint(ipad) {
+    font-size: 45px;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2;
+  @include breakpoint(large) {
+    font-size: 28px;
+  }
+  @include breakpoint(xxxmedium) {
+    font-size: 26px;
+  }
+  @include breakpoint(xmedium) {
+    font-size: 24px;
+  }
+  @include breakpoint(ipad) {
+    font-size: 22px;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3;
+  @include breakpoint(xxxmedium) {
+    font-size: 22px;
+  }
+  @include breakpoint(xmedium) {
+    font-size: 20px;
+  }
+  @include breakpoint(ipad) {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-size: $font-size-h4;
+  @include breakpoint(xxxmedium) {
+    font-size: 18px;
+  }
+  @include breakpoint(xmedium) {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  @include breakpoint(large) {
+    font-size: 17px;
+  }
+}
+
+p {
+  line-height: 1.55em;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  @include breakpoint(large) {
+    font-size: 17px;
+  }
+  @include breakpoint(xxxmedium) {
+    font-size: 16px;
+    line-height: 1.45em;
+  }
+  @include breakpoint(largeMobile) {
+    font-size: 15px;
+    line-height: 1.35em;
+  }
+}
+
+a,
+li,
+.btn {
+  color: #000;
+}
+
+li,
+a {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 0px;
+}
