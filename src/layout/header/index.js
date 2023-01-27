@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Imagesdata } from "../../assets/images/imageData";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const { Logo, PhoneIcon, MailIcon, BlackArrow } = Imagesdata || {};
   const [isNavOpen, SetIsNavOpen] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = "auto";
+  }, []);
 
   const toggleHandler = (val) => {
     if (val) {
