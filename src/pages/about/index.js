@@ -45,7 +45,12 @@ const About = () => {
               <div className="detail__box">
                 <ul>
                   <li>
-                    <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                      <i
+                        className="fa fa-linkedin-square"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
                   </li>
                   <li>
                     <h6>Mike Kottmann</h6>

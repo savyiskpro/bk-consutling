@@ -61,7 +61,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="down-arrow">
-          <a href="#">
+          <a href="#nextSection">
             SCROLL DOWN
             <i className="fa fa-angle-down" aria-hidden="true"></i>
           </a>
@@ -70,7 +70,7 @@ const Landing = () => {
 
       {/* <!-- experince  --> */}
 
-      <div className="experince">
+      <div className="experince" id="nextSection">
         <div className="row flex">
           <div className="img__box" data-aos="fade-right">
             <figure>
@@ -233,7 +233,12 @@ const Landing = () => {
               <div className="detail__box">
                 <ul>
                   <li>
-                    <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                      <i
+                        className="fa fa-linkedin-square"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
                   </li>
                   <li>
                     <h6>Mike Kottmann</h6>
