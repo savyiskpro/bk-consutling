@@ -2,5 +2,32 @@ $filePath: "../../";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
-@import url("https://db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold");
-@import url("https://db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium");
+
+@font-face {
+  font-family: "Circular Std Medium";
+  src: url("../../fonts/circular-std-medium.eot"); /* IE9*/
+  src: url("../../fonts/circular-std-medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/circular-std-medium.woff2") format("woff2"),
+    /* chrome firefox */ url("../../fonts/circular-std-medium.woff")
+      format("woff"),
+    /* chrome firefox */ url("../../fonts/circular-std-medium.ttf")
+      format("truetype"),
+    /* chrome firefox opera Safari, Android, iOS 4.2+*/
+      url("../../fonts/circular-std-medium.svg#Circular Std Medium")
+      format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+  font-family: "Circular Std Bold";
+  src: url("../../fonts/circular-std-bold.eot"); /* IE9*/
+  src: url("../../fonts/circular-std-bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../fonts/circular-std-bold.woff2") format("woff2"),
+    /* chrome firefox */ url("../../fonts/circular-std-bold.woff")
+      format("woff"),
+    /* chrome firefox */ url("../../fonts/circular-std-bold.ttf")
+      format("truetype"),
+    /* chrome firefox opera Safari, Android, iOS 4.2+*/
+      url("../../fonts/circular-std-bold.svg#Circular Std Bold") format("svg"); /* iOS 4.1- */
+}
