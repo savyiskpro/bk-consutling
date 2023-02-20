@@ -232,7 +232,7 @@ header {
         font-size: 23px;
         font-weight: 500;
         margin-bottom: 10px;
-        font-family: "Circular Std", sans-serif;
+        font-family: "Circular Std Medium";
         font-weight: 500;
         @include breakpoint(slarge) {
           font-size: 16px;
@@ -277,7 +277,7 @@ header {
         font-weight: 700;
         line-height: 1;
         position: relative;
-        font-family: "Circular Std", sans-serif;
+        font-family: "Circular Std Bold";
         @include breakpoint(slarge) {
           font-size: 30px;
         }
