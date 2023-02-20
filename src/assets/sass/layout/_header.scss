@@ -232,11 +232,15 @@ header {
         font-size: 23px;
         font-weight: 500;
         margin-bottom: 10px;
-        font-family: "Circular Std Medium";
         font-weight: 500;
         @include breakpoint(slarge) {
           font-size: 16px;
           margin-left: 30px;
+        }
+      }
+      &:nth-of-type(1) {
+        a {
+          font-family: "Circular Std Medium";
         }
       }
       .btn {
@@ -248,7 +252,7 @@ header {
         font-size: 18px;
         font-weight: 500;
         margin-top: 50px;
-        font-family: $font-family-body;
+        font-family: "Circular Std Medium";
         &:hover {
           color: $color-white;
           img {
